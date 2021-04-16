@@ -11,7 +11,7 @@ const app = express();
 
 
 var corsOptions = {
-  origin: 'https://mern-mynotes.herokuapp.com/',
+  origin: 'https://mern-mynotes.herokuapp.com',
   optionsSuccessStatus: 200
 }
 
