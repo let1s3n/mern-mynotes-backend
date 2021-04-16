@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel src --out-dir ./build",
+    "build-babel": "babel src --out-dir build",
     "build": "npm run clean && npm run build-babel",
-    "start": "node ./build/index.js",
+    "start": "node index.js",
     "dev": "nodemon src/index.js --exec babel-node"
   },
   "keywords": [],
