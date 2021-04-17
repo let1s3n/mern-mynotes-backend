@@ -10,10 +10,10 @@ import {createRoles} from './libs/initialSetup';
 const app = express();
 
 
-var corsOptions = {
+/* var corsOptions = {
   origin: 'https://mern-mynotes.herokuapp.com',
   optionsSuccessStatus: 200
-}
+} */
 
 createRoles();
 
@@ -23,7 +23,7 @@ app.set('json spaces', 2)
 
 //Middlewares
 /* app.use(morgan('dev')); */
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json()); 
 
 //Routes

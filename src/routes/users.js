@@ -6,13 +6,13 @@ const router = Router();
 const { getUsers, getUser,createUser, updateUser, deleteUser } = usersCtrl;
 
 router.route('/')
-  .get(authJwt.verifyToken,getUsers)
-  .post([authJwt.verifyToken,authJwt.isModerator],createUser)
+  .get(/* authJwt.verifyToken, */getUsers)
+  .post(/* [authJwt.verifyToken,authJwt.isModerator], */createUser)
 
 router.route('/:id')
-  .get(authJwt.verifyToken,getUser)
-  .put([authJwt.verifyToken,authJwt.isModerator],updateUser)
-  .delete([authJwt.verifyToken,authJwt.isModerator],deleteUser)
+  .get(/* authJwt.verifyToken, */getUser)
+  .put(/* [authJwt.verifyToken,authJwt.isModerator], */updateUser)
+  .delete(/* [authJwt.verifyToken,authJwt.isModerator], */deleteUser)
 
 
 export default router;
